@@ -35,6 +35,11 @@ io.on('connection', (socket) => {
   });
 });
 
+// Health check route
+app.get('/', (req, res) => {
+  res.send('WebRTC Signaling Server Running');
+});
+
 server.listen(5000, () => {
   console.log('Server running on port 5000');
 });
